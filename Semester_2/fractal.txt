@@ -1,0 +1,26 @@
+translate the pixel plane x:[-2, 2], y:[-1/2, 1/2]
+so that the origin will be in the middle
+ want to zoom into the plane interactively
+values will change!!!!
+make the bounds variable
+
+for each pixel (x, y)-->color?
+(x, y)--> (a, b) [represents a+bi]
+
+size of the window
+
+sequence for each pixel
+z0 = 0 + 0i
+loop: (limit on the number of steps)
+1. Zi = (z_(i-1))^2 + C
+	C = the value of corresponding (a, b) [a+bi]
+
+count the number of steps
+(number of steps probably a var)
+if (steps == maxSteps) color the pixel based on what is in the set
+else [if the magnitude of the number> 2: STOP;
+	make the color : actual color*( 1-steps/max)
+		scale it 
+
+0, z0, z1...
+0, C, C^2+C,...

@@ -1,0 +1,45 @@
+Ray Traces
+1. Ray Casting
+2. Recursion
+3. Shapes/Surfaces
+4. Textures: Color, Images
+5. Materials
+
+user.tjhsst.edu/smtorbert/y2018
+
+gcc writeppm.c
+in main
+-setting everything to green
+-write out the file
+./a.out
+allgreen.ppm
+display ~.ppm
+
+eye (x, y, z)
+
+set z = 0
+scale x, y
+
+hit one sphere--> sphere's color
+hit none--> background color
+
+	x y
+2D  640 480
+3D	1.333 1.0
+Equation for the line for the ray
+rx = px - ex (pixel, eye)
+rx /= normalize
+etc
+x = ex + T*rx (1)
+looking up, T is negative (floor behind)
+
+substitute eq(1) into (x - cx)^2 + (y - cy)^2 + (z - cz)^2 = R^2
+--> aT^2 + bT + c
+a = 1.0
+b = 
+c = __ - R^2
+Hint:
+dx = ex - cx
+
+Discriminant:
+if more than one:pick the closer color (find the smallest T)
